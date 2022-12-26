@@ -11,7 +11,7 @@ connectDB();
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("API is running");
+  res.send("Server API Running");
 });
 
 app.get("/api/notes", (req, res) => {
@@ -19,7 +19,7 @@ app.get("/api/notes", (req, res) => {
 });
 
 
-app.use('/api/users', userRoutes)
+app.use('/api/users', userRoutes);
 app.use(notFound);
 app.use(errorHandler);
 /*
